@@ -1,0 +1,62 @@
+﻿<div class="roundModal" data-ng-if="model.type === 'round'">
+        <div class="modal-header text-center">
+            <h3>Round {{model.roundNumber}}</h3>
+        </div>
+        <div class="modal-body text-center">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <p>{{model.players[0].Name}}</p>
+                    <div class="iconCircle active {{model.players[0].weapon.className}}">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p>{{model.players[1].Name}}</p>
+                    <div class="iconCircle active {{model.players[1].weapon.className}}">
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <p class="nameWinner" data-ng-show="model.winner">{{model.winner.Name}} wins this round!!!</p>
+                <p class="nameWinner" data-ng-show="!model.winner">This is a tie!!!</p>
+            </div>          
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" type="button" data-ng-click="ok()" style="margin:0 auto;">Continue</button>
+        </div>
+</div>
+
+<div class="finalRoundModal" data-ng-if="model.type === 'final'">
+        <div class="modal-header text-center">
+            <h3 class="modal-title">Game finished</h3>
+        </div>
+        <div class="modal-body text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Final round results:</h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <p>{{model.players[0].Name}}</p>
+                    <div class="iconCircle active {{model.players[0].weapon.className}}">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p>{{model.players[1].Name}}</p>
+                    <div class="iconCircle active {{model.players[1].weapon.className}}">
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p>{{model.players[0].Name}} {{model.score.player1}} - {{model.players[1].Name}} {{model.score.player2}}</p>
+                <p class="nameWinner" data-ng-show="model.winner">{{model.winner.Name}} is the winner!!!</p>
+                <p class="nameWinner" data-ng-show="!model.winner">There is a tie!!!</p>
+            </div>            
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" type="button" data-ng-click="ok()">Close</button>
+        </div>
+</div>
+ 

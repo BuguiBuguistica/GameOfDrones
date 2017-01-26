@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href='https://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic' rel='stylesheet' type='text/css'/>
+
+    <title>Game Of Drones</title>     
+     
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>   
+     
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+   <script src="Scripts/angular-dragdrop.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body data-ng-app="GameOfDronesApp">
+    <div class="container" data-ng-view="">
+
+
+    </div>
+    <!--APP-->
+    <script src="app/app.js"></script>
+    <!--Controllers-->
+    <script src="app/controllers/home-controller.js"></script>
+    <script src="app/controllers/game-controller.js"></script>
+    <script src="app/controllers/setCustomGame-controller.js"></script>
+    <!--Services-->
+    <script src="app/services/player-service.js"></script>
+    <script src="app/services/rules-service.js"></script>
+    <!--Resource-->
+    <script src="app/resources/player-resource.js"></script>
+    <!--Styles-->
+    <link href="app/css/styles.css" rel="stylesheet"/>
+</body>
+</html>

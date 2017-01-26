@@ -1,0 +1,258 @@
+﻿body {
+    background:#D3D6D5;
+    font-family: 'Asap', sans-serif;
+    font-size:18px;
+    color:#666;
+}
+.green {
+    color:#499784;
+}
+.red {
+    color:#D22828;
+}
+.grey {
+    color:#AAACA9;
+}
+.grey-dark {
+    color:#666;
+}
+.space-top-01 {
+    margin-top:5px;
+}
+.space-top-02 {
+    margin-top:10px;
+}
+.space-top-06 {
+    margin-top:30px;
+}
+.space-top-08 {
+    margin-top:40px;
+}
+.space-top-10 {
+    margin-top:50px;
+}
+.space-top-20 {
+    margin-top:100px;
+}
+.space-top-40 {
+    margin-top:200px;
+}
+/**********************Buttons*******************/
+.btn:focus {
+    outline:none;
+}
+.btn {
+    padding: 10px 40px;
+    font-size: 1.3em;
+    border-radius: 10px;
+}
+.btn-green,.btn-green:focus {    
+    background-color: #49C0A7;
+    border: 4px solid #499784;    
+    color: #fff;
+    
+}
+.btn-green:hover  {
+    background-color: #22A7A9;
+    color: #fff;
+}
+.btn.reset {
+    font-size: 1.4em;
+}
+.btn-default {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: 4px solid #adadad;
+}
+.icons {
+    padding:10px;
+}
+.btn-icon {
+border-radius:50%;
+width:100px;
+height:100px;
+background:#fff;
+margin-bottom:5px;
+border:5px solid #808080;
+}
+.btn-icon i {
+    display:block;
+}
+/***********************Forms*******************/
+.form-control {
+    height: 46px;
+    font-size: 1em;
+    border-radius:10px;
+}
+
+/***********************Brand******************/
+.brand-small {
+width:300px;
+}
+
+/**********************Score Table************/
+.scoreTable {
+    border:2px solid #666;
+    background:#E6E6E6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:85%;
+    border-radius:6px;
+}
+.scoreTable .title {
+        font-size:2em;
+        color:#fff;
+        background:#D22828;
+        line-height:60px;
+        width:100%;
+        text-align:center;        
+}
+.scoreTable .content ul {
+    margin:5px;
+    padding:0 10px 10px 10px;
+}
+.scoreTable .content li {
+    list-style:none;
+    padding-top:10px;
+    line-height:20px;
+}
+.scoreTable .content  i.won {
+   color:#49C0A7;
+}
+.scoreTable .content  i.non {
+   color:#B3B3B3;
+}
+.scoreTable .content  i.lost {
+   color:#D22828;
+}
+/****************Icons***************/
+#weapon {
+    margin-top: 8px;
+}
+.iconCircle {
+    border:5px solid #808080;
+    border-radius:50%;
+    width:115px;
+    height:115px;
+    background:#fff;
+    padding: 13px 0 0 13px;
+    cursor:pointer;
+    display:block;
+    margin: 0 auto;
+}
+    .iconCircle.disabled {
+       display:none;
+    }
+   
+.iconCircle:hover,.iconCircle.active {
+    border:5px solid #D22828;
+}
+.iconCircle.active.paper, .iconCircle.paper:focus {
+    background:#F7ED5A;
+}
+.iconCircle.active.rock, .iconCircle.rock:focus {
+    background:#FF931E;
+}
+.iconCircle.active.scissor,.iconCircle.scissor:focus {
+    background:#49C0A7;
+}
+
+.iconCircle.active.cloud, .iconCircle.cloud:focus {
+    background:#F7ED5A;
+}
+.iconCircle.active.star, .iconCircle.star:focus {
+    background:#FF931E;
+}
+.iconCircle.active.heart,.iconCircle.heart:focus {
+    background:#49C0A7;
+}
+
+
+.paper > i::after {    
+    content:url('../images/icons/paper-08.svg');
+}
+.rock > i::after {
+    content:url('../images/icons/rock-08.svg')
+}
+.scissor > i::after {
+    content:url('../images/icons/scissor-08.svg')
+}
+
+
+.cloud > i::after {    
+    content:url('../images/icons/cloud-08.svg');
+}
+.star > i::after {
+    content:url('../images/icons/star-08.svg')
+}
+.heart > i::after {
+    content:url('../images/icons/heart-08.svg')
+}
+
+.iconCircle.paper.active.paper > i::after, .iconCircle:hover.paper > i::after {
+    content:url('../images/icons/paper-active-08.svg')
+}
+.iconCircle.scissor.active.scissor > i::after, .iconCircle:hover.scissor > i::after {
+    content:url('../images/icons/scissor-active-08.svg')
+}
+.iconCircle.rock.active.rock > i::after, .iconCircle:hover.rock > i::after {
+    content:url('../images/icons/rock-active-08.svg')
+}
+
+
+.iconCircle.cloud.active > i::after, .iconCircle:hover.cloud > i::after {
+    content:url('../images/icons/cloud-active-08.svg')
+}
+.iconCircle.star.active > i::after, .iconCircle:hover.star > i::after {
+    content:url('../images/icons/star-active-08.svg')
+}
+.iconCircle.heart.active > i::after, .iconCircle:hover.heart > i::after {
+    content:url('../images/icons/heart-active-08.svg')
+}
+/***********************Titles*******************/
+
+/***********************Modal******************/
+.roundModal .modal-header{
+    background:#499784;
+    color:#fff;
+    font-size:1.5em;
+}
+.finalRoundModal .modal-header{
+    background:#D22828;
+    color:#fff;
+    font-size:1.5em;
+}
+.roundModal .modal-body p, .finalRoundModal .modal-body p {
+    font-size:1.2em;
+}
+.finalRoundModal .modal-body .nameWinner, .roundModal .modal-body .nameWinner {
+    font-size:1.5em;
+    color:#499784;
+    font-style:italic;
+}
+.roundModal .modal-footer, .finalRoundModal .modal-footer{
+    text-align:center;
+}
+
+/**********************************Creation Rules ***********************/
+.contentCreationRules {
+    border:2px dotted #D22828;
+    height:150px;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+.title1 {
+    color:#499784;
+    font-style:italic;
+}
+.rulesList li{
+    padding:10px 0;
+}
+.rulesList .btn {
+    padding: 10px 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    width: 100%;
+}

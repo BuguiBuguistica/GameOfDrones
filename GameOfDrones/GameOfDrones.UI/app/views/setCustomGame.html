@@ -1,0 +1,68 @@
+﻿<div class="row space-top-10">
+    <div class="col-md-4">
+        <img class="img-responsive brand-small" src="app/images/brand-06.svg" />
+        <h3 class="green">Create your own rules</h3>
+        <div class="row">
+            <div class="icons col-md-5" data-ng-repeat="icon in icons">
+                <a class="iconCircle {{icon.className}}" data-ng-click="selectWeapon(icon)" data-ng-class="{disabled:icon.isDisabled}" data-ng-disabled="icon.isDisabled">
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 space-top-20">
+        <div class="row">
+            <h2 class="text-center title1">Who Kills Who</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-5 contentCreationRules">
+                <div class="iconCircle active {{selectedPosition1.className}}" data-ng-show="selectedPosition1">
+                    <i></i>
+                </div>                
+            </div>
+            <div class="col-md-offset-2 col-md-5 contentCreationRules">
+                <div class="iconCircle active {{selectedPosition2.className}}" data-ng-show="selectedPosition2">
+                    <i></i>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">            
+            <button class="btn btn-green" data-ng-click="createRule()" data-ng-disabled="!selectedPosition1 || !selectedPosition2"> Create Rule</button>
+            <button class="btn btn-default reset" data-ng-click="resetIcons()"><i class="grey glyphicon glyphicon-repeat"></i></button>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="scoreTable">
+            <div class="title">
+                New Rules
+            </div>
+            <div class="content">
+                <ul class="rulesList">
+                    <li class="text-center">
+                        Who Kills Who
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </li>
+                    <li class="row" data-ng-repeat="rule in groupOfRules" style="border-bottom:2px dotted #ccc">
+                        <div class="col-md-6 text-center {{rule[0].className}}"><i></i></div>
+                        <div class="col-md-6 text-center {{rule[1].className}}"><i></i></div>
+                        <div class="col-md-12 text-center red">
+                            {{rule[0].className}} Kills {{rule[1].className}}
+                        </div>
+                    </li>
+                    <li>
+                        <button data-ng-disabled="groupOfRules.length < 1" class="btn btn-default" data-ng-click="cleanRules()"> Clean Rules</button>
+                    </li>
+                    <li>
+                        <p><small>To Play with the new rules you should have more than 1 created</small></p>
+                        <button data-ng-disabled="groupOfRules.length < 2" class="btn btn-green" data-ng-click="playCustom()"> Play Custom Game</button>
+                    </li>                    
+                    <li>
+                        <button class="btn btn-green" data-ng-click="playStandard()"> Play Standard Game</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

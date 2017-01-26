@@ -1,0 +1,65 @@
+﻿<div class="row space-top-10">
+    <div class="col-md-9 ">   
+        <img class="img-responsive brand-small" src="app/images/brand-06.svg" />
+        <h3 class="green">Round {{rounds[roundIndex].number}}<span data-ng-show="!rounds[roundIndex].number">3</span></h3>
+    </div>
+    <div class="col-md-3">
+        <div class="scoreTable">
+            <div class="title">
+                Score
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        {{player1.Name}}
+                        <span data-ng-repeat="round in rounds">
+                            <i data-ng-show="round.playerWinner === 0" class="glyphicon glyphicon-minus non"></i>
+                            <i data-ng-show="round.playerWinner === 1" class="glyphicon glyphicon-ok-circle won"></i>
+                            <i data-ng-show="round.playerWinner === 2" class="glyphicon glyphicon-remove-circle lost"></i>
+                        </span>
+                    </li>
+                     <li>
+                         {{player2.Name}}
+                         <span data-ng-repeat="round in rounds">
+                            <i data-ng-show="round.playerWinner === 0" class="glyphicon glyphicon-minus non"></i>
+                            <i data-ng-show="round.playerWinner === 2" class="glyphicon glyphicon-ok-circle won"></i>
+                            <i data-ng-show="round.playerWinner === 1" class="glyphicon glyphicon-remove-circle lost"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="row space-top-08" data-ng-show="!showOptions">
+    <div class="col-md-offset-3 col-md-6">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 text-center">
+                <h1 class="red">{{currentPlayer.Name}}</h1>
+                <h3>Player {{currentPlayer.FakeId}}</h3>
+            </div>            
+        </div>
+        <div class="icons row space-top-01">
+            <div id="weapon" class="col-md-4" data-ng-repeat="rule in rules">
+                <a class="iconCircle {{rule.className}}" data-ng-class="{active:weaponSelected.Id === rule.Id}" data-ng-click="selectWeapon(rule)">
+                    <i></i>
+                </a>
+            </div>
+        </div>
+        <div class="row space-top-01">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-green" data-ng-click="play()" data-ng-disabled="!weaponSelected">
+                    <span data-ng-show="currentPlayer.FakeId === 1">Next Player</span>
+                    <span data-ng-show="currentPlayer.FakeId === 2">Next Play</span>
+                </button>
+            </div>            
+        </div>
+    </div>
+</div>
+<div class="row space-top-40" data-ng-show="showOptions">
+     <div class="col-md-12 text-center">
+         <p><button class="btn btn-green" data-ng-click="setNewPlayers()"> New Players</button></p>
+         <p><button class="btn btn-green" data-ng-click="playAgain()"> Play Again</button></p>
+         <p><button class="btn btn-green" data-ng-click="setCustomGame()"> Custom Play</button></p>
+     </div> 
+</div>
